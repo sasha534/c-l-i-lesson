@@ -25,4 +25,10 @@ https://code.tutsplus.com/ru/tutorials/how-to-create-custom-cli-commands-using-t
 
 #3) composer dump -o обновить автозагрузчик PSR4
 
-#4) mkdir /bin/console.php
+#4) mkdir /bin/console.php исполняемій
+
+#5) add: $app->add(new HelloworldCommand()); AND
+
+HelloworldCommand
+
+#5) start: php bin/console hello-world tutsplus
