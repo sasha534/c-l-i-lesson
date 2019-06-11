@@ -1,3 +1,4 @@
+https://code.tutsplus.com/ru/tutorials/how-to-create-custom-cli-commands-using-the-symfony-console-component--cms-31274
 # c-l-i-lesson
 
 1) composer require symfony/console
@@ -23,3 +24,5 @@
 }
 
 #3) composer dump -o обновить автозагрузчик PSR4
+
+#4) mkdir /bin/console.php

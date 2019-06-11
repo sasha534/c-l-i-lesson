@@ -38,7 +38,7 @@ class ErrorListenerTest extends TestCase
         ;
 
         $listener = new ErrorListener($logger);
-        $listener->onConsoleError(new ConsoleErrorEvent(new ArgvInput(['console.php', 'test:run', '--foo=baz', 'buzz']), $this->getOutput(), $error, new Command('test:run')));
+        $listener->onConsoleError(new ConsoleErrorEvent(new ArgvInput(['console', 'test:run', '--foo=baz', 'buzz']), $this->getOutput(), $error, new Command('test:run')));
     }
 
     public function testOnConsoleErrorWithNoCommandAndNoInputString()
@@ -66,7 +66,7 @@ class ErrorListenerTest extends TestCase
         ;
 
         $listener = new ErrorListener($logger);
-        $listener->onConsoleTerminate($this->getConsoleTerminateEvent(new ArgvInput(['console.php', 'test:run']), 255));
+        $listener->onConsoleTerminate($this->getConsoleTerminateEvent(new ArgvInput(['console', 'test:run']), 255));
     }
 
     public function testOnConsoleTerminateForZeroExitCodeDoesNotWriteToLog()
@@ -78,7 +78,7 @@ class ErrorListenerTest extends TestCase
         ;
 
         $listener = new ErrorListener($logger);
-        $listener->onConsoleTerminate($this->getConsoleTerminateEvent(new ArgvInput(['console.php', 'test:run']), 0));
+        $listener->onConsoleTerminate($this->getConsoleTerminateEvent(new ArgvInput(['console', 'test:run']), 0));
     }
 
     public function testGetSubscribedEvents()
@@ -102,7 +102,7 @@ class ErrorListenerTest extends TestCase
         ;
 
         $listener = new ErrorListener($logger);
-        $listener->onConsoleTerminate($this->getConsoleTerminateEvent(new ArgvInput(['console.php', 'test:run', '--foo=bar']), 255));
+        $listener->onConsoleTerminate($this->getConsoleTerminateEvent(new ArgvInput(['console', 'test:run', '--foo=bar']), 255));
         $listener->onConsoleTerminate($this->getConsoleTerminateEvent(new ArrayInput(['name' => 'test:run', '--foo' => 'bar']), 255));
         $listener->onConsoleTerminate($this->getConsoleTerminateEvent(new StringInput('test:run --foo=bar'), 255));
     }
