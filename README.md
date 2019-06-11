@@ -31,4 +31,8 @@ https://code.tutsplus.com/ru/tutorials/how-to-create-custom-cli-commands-using-t
 
 HelloworldCommand
 
-#5) start: php bin/console hello-world tutsplus
+#6) start: php bin/console hello-world tutsplus
+
+#7) Add ClearcacheCommand
+
+#6) bin/console clear-cache --groups=group1,group2
