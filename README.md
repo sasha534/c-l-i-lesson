@@ -2,14 +2,14 @@
 
 1) composer require symfony/console
 
-2) composer.json
+#2) composer.json
 
 {
     "require": {
         "symfony/console": "^4.0"
     }
 }
-
+#change:
 {
     "require": {
         "symfony/console": "^4.0"
@@ -22,4 +22,4 @@
      }
 }
 
-3) composer dump -o обновить автозагрузчик PSR4
+#3) composer dump -o обновить автозагрузчик PSR4
